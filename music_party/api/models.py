@@ -16,7 +16,7 @@ def generate_code():
 
 # Create your models here.
 class Room(models.Model):
-    code = models.CharField(max_length=8, default= generate_code, unique=True)
+    code = models.CharField(max_length=8, default=generate_code, unique=True)
     host = models.CharField(max_length=50, unique=True)
     # null = False means we have to pass in a value 
     guest_can_pause = models.BooleanField(null=False, default=False)
